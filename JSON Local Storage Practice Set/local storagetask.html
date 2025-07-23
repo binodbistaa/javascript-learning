@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>local Storage Practice</title>
+  </head>
+  <body>
+    <form action="" onsubmit="return handleSubmit()">
+      <input type="text" id="inputText" />
+      <button type="submit">Submit</button>
+    </form>
+    
+
+    <h1 id="print"></h1>
+
+    <script>
+
+    let data = localStorage.getItem("data");
+    printId = document.getElementById('print')
+   
+    if(data.length > 0){
+      printId.innerHTML = data  
+    }
+   
+      function handleSubmit() {
+         let valid = true
+        let dataInput = document.getElementById("inputText").value;
+        
+         if(dataInput.length > 0)
+         {
+           localStorage.setItem("data", dataInput);
+           valid =  true ;
+           return valid ;
+
+        }
+        else{
+           localStorage.setItem("data", dataInput);
+           alert('Input is required')
+        }
+        
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>For Each loop</title>
+</head>
+<body>
+  <script>
+    let food = ['Apple' , 'Banana' , 'Kiwi' , 'Orange' , 'Naspati']
+    // for (let i = 0 ; i < food.length ; i++){
+    //   console.log(food[i])
+    // }
+
+    // food.forEach(num => console.log(num) );
+    function search(food , num){
+       for (let i = 0 ; i < food.length ; i++){
+      if(food[i] === num){
+        console.log(`index is ${i}`);
+        return;
+      }
+    }
+    console.log(`Element wasnot found`)
+    }
+    search(food , 'Orange');
+  </script>
+</body>
+</html>

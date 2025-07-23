@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Foreach</title>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <script>
+      const schoolData = [
+        {
+          class: "10A",
+          students: [
+            {
+              id: 1,
+              name: "Sita",
+              age: 15,
+              marks: { math: 88, science: 92, english: 81 },
+            },
+            {
+              id: 2,
+              name: "Ram",
+              age: 16,
+              marks: { math: 75, science: 80, english: 70 },
+            },
+            {
+              id: 3,
+              name: "Hari",
+              age: 15,
+              marks: { math: 95, science: 85, english: 90 },
+            },
+          ],
+        },
+        {
+          class: "10B",
+          students: [
+            {
+              id: 4,
+              name: "Gita",
+              age: 14,
+              marks: { math: 60, science: 65, english: 70 },
+            },
+            {
+              id: 5,
+              name: "Shyam",
+              age: 16,
+              marks: { math: 78, science: 75, english: 80 },
+            },
+            {
+              id: 6,
+              name: "Mina",
+              age: 15,
+              marks: { math: 85, science: 95, english: 88 },
+            },
+          ],
+        },
+      ];
+
+      const array = [
+        {
+          name: "estion",
+          age: 23,
+          gender: "male",
+        },
+        {
+          name: "saurav",
+          age: 20,
+          gender: "male",
+        },
+        {
+          name: "onion",
+          age: 29,
+          gender: "male",
+        },
+        {
+          name: "mrchat",
+          age: 5,
+          gender: "custom",
+        },
+      ];
+
+      // const vowel = ["a", "e", "i", "o", "u"];
+      // const filter = array.filter((item) => {
+      //   return vowel.includes(item.name[0]);
+      // });
+
+      // console.log(filter);
+      const filter = array.filter((item)=>{
+         return  item.gender 
+      })
+      console.log(filter)
+    </script>
+  </body>
+</html>

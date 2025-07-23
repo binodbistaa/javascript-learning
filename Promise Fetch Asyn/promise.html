@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Promise</title>
+  </head>
+  <body>
+    <div id="div"></div>
+    <script>
+      // let myPromise = new Promise ((resolve , reject)=>{
+      // setTimeout (()=>{
+      //   let valid = false ;
+      //   if (valid){
+      //     resolve( 'Completely done task')
+      //   }
+      //   else{
+      //     reject('Error come')
+      //   }
+      // } , 2000 )
+
+      // })
+
+      // myPromise.then(
+      //   (message) => {
+      //     console.log(message)
+      //   }
+      // )
+      // .catch((error) => {
+      //   console.log(error)
+      // })
+
+      // const promise = new Promise((resolve, reject) => {
+      //   reject("failed");
+      // });
+
+      // const handlePromise = async () => {
+      //   try {
+      //     const check = await promise;
+      //     console.log(check);
+      //   } catch (err) {
+      //     console.log(err);
+      //   }
+      // };
+
+      // handlePromise();
+
+      // function api(){
+      //  return
+      //  new Promise ((resolve , reject)=>{
+      //  resolve ('hello madam')
+      // })}
+
+      // api().then((res)=>{
+      //   console.log(res)
+      // })
+
+      // async function checkPromise() {
+      //   return new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       const teaCheck = true;
+      //       if (teaCheck) {
+      //         resolve("Tea is ready to drink , please come here");
+      //       } else {
+      //         reject("Please wait for ready to make tea");
+      //       }
+      //     }, 2000);
+      //   });
+      // }
+
+      // checkPromise()
+      //   .then((message) => {
+      //     console.log(message);
+      //     return "Second data ..........";
+      //   })
+      //   .then((message) => {
+      //     console.log(message);
+      //     return "Third data loading";
+      //   })
+      //   .then((aayna) => {
+      //     console.log(aayna);
+      //   });
+
+      function first() {
+        setTimeout(()=>{
+          console.log("first data.......1");
+        } , 2000)
+      }
+      function second() {
+         setTimeout(()=>{
+          console.log("Second data.......1");
+        } , 2000)
+      }
+
+      function third() {
+          setTimeout(()=>{
+          console.log("Third data.......1");
+        } , 2000)
+      }
+
+      async function checkAsync(params) {
+        await first();
+        await second();
+        await third();
+      }
+      checkAsync();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>loops</title>
+</head>
+<body>
+  <script>
+
+
+// let num = 0;   //Initialization
+    // while(num <= 9){  //condition
+    //   num = num + 1;  //updating
+    //   console.log(num)
+    // }
+
+
+
+// Nested loop
+
+  //   let a = '*'
+  // for ( let i = 1 ; i<=5; i++)
+  // {
+  //   for ( let j=5 ; j>=i ; j--)
+  // {
+  
+  //   document.write(j);
+
+  // }
+  // document.write('<br/>');}
+  
+  //  for ( let j = 5 ; j>=i ; j++)
+  // {
+  //   for ( let i = 1  ; i<=5; i++)
+   
+  // {
+  
+  //   document.write(j);
+
+  // }
+  // document.write('<br/>');}
+
+// Accumulate Array
+
+
+// let nums = [2 , 3 , 4 , 5 , 6, 7 , 8 , 9 ]    
+// let sum = 0;
+// for (let i = 0 ; i < nums.length; i++){
+//   sum = sum + nums[i];  
+// }
+// console.log(sum)
+
+// let squares = [];
+// for (let i = 0; i < nums.length; i++){
+//   squares.push(nums[i] * nums[i]);
+// }
+// console.log(squares);
+
+
+
+// // break
+// let arr = [2 , 3 , 4 , 5 , 6, 7 , 8 , 9 ]  ;  
+//  for (let i = 0 ; i < arr.length; i++){
+//   if(arr[i] === 2){
+//   console.log(`Array is ${i}`);
+//   break;
+// }
+
+//  }
+
+
+
+// //for in
+//  let arr = ['Nepal' ,'India' , 'Japan' , 'Korea' , 'America']
+//  for(let item in arr){
+//     console.log(item)
+//  }
+
+// //for of
+//  let arr = ['Nepal' ,'India' , 'Japan' , 'Korea' , 'America']
+//  for(let item of arr){
+//     console.log(item)
+//  }
+
+// let x = prompt('Enter any number Name')
+// let flag = false
+//  let arr = ['Nepal' ,'India' , 'Japan' , 'Korea' , 'America']
+//  for( let item of arr){
+//     if( x == item){
+//       flag = true;
+//       break;
+//         }    
+//   }
+//   if(!flag){
+//     alert("not found in array") 
+//   }
+//   else{
+//     alert(`${x} is found in  index  `)
+//   }
+
+
+
+let x = prompt('Enter any number Name')
+let arr = ['Nepal' ,'India' , 'Japan' , 'Korea' , 'America']
+let index = arr.indexOf(x);
+    if(index !== -1){
+    alert(`${x} is found in  index ${index}`) 
+  }
+  else{
+    alert(`${x} isnot found in array`)
+  } 
+  </script>
+</body>
+</html>

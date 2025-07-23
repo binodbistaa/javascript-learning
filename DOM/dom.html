@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dom</title>
+</head>
+<body>
+  <!-- <h1>Validate Text</h1>
+  <input type ="text" id="texting" placeholder="Enter a text">
+  <br>
+  <span style="color:red;" id="message"></span>
+  <button onclick="validate()">Check Text</button>
+  <div title="hey DOM">DOM</div>
+   <div class="sagar">000</div>
+   <div class="sagar">001</div>
+   <div class="sagar">002</div>
+   <div class="sagar">003</div> -->
+
+   <form onsubmit="return handleSubmit()" id='myform'>
+    <label>Name</label>
+    <input id="name" type="text" >
+    <label id="email" name="email">Email</label>
+    <input type="email" >
+    <label id="password" name="password">Password</label>
+    <input type="password">
+    <button type="submit">Submit</button>
+   </form>
+
+
+  <script>
+    //DOM helps to change the nodes in the pages where nodes means the sub element like div,input,br,span etc
+    //DOM helps to intract the page with the help for js
+    //DOM incteacts with every elements and style
+    // document.writeln("this is new item in page")
+    // console.log(document.body.style.color= "green")
+    // console.log(document.body.children[0].innerHTML = '<marquee>I am here from DOM</marquee>')
+    // console.log(document.body.children[5].innerHTML = " <marquee> Pani paryo </marquee> ")
+
+    // console.log(document.getElementsByClassName("sagar")[2].innerHTML = "Hero")
+
+    function handleSubmit(){
+        var name = document.getElementById("name").value 
+        console.log(name)
+        return false
+    }
+  </script>
+</body>
+</html>

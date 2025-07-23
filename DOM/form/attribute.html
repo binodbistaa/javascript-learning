@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Attriutes</title>
+  </head>
+  <body>
+    <input class="inputCheck" />
+    <input class="inputCheck" />
+    <input class="inputCheck" />
+    <input class="inputCheck" />
+
+
+    <!-- create Element -->
+     <ul><li>hello1</li>
+      <li>hello2</li>
+      <li>hello3</li>
+      <li>hello4</li>
+    </ul>
+     
+
+
+
+    <script>
+
+    // const paraElement = document.createElement('h1')   
+    // paraElement.setAttribute('class' , 'Binod')
+    // console.log(paraElement)
+    // paraElement.innerText = 'Hello I am Binod Bista'
+
+    
+    // document.body.appendChild(paraElement)  
+
+
+
+    // const child = document.querySelector('li')
+    // console.log(child.nextElementSibling)
+   
+
+
+      let input = document.querySelector(".inputCheck");
+      const a = document.createAttribute("my_attrib");
+      a.value = "newVal";
+      input.setAttributeNode(a);
+      console.log(input)
+
+    </script>
+  </body>
+</html>

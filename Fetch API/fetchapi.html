@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fetch API</title>
+  </head>
+  <body>
+    <script>
+      const getfacts = async () => {
+        console.log("getting data.......");
+        const url = "https://dummyjson.com/products";
+        const response = await fetch(url);
+        console.log(response); //Json format
+        let data = response.json();
+        console.log(data);
+      };
+      getfacts();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="dom.css" />
+  </head>
+  <body>
+    <form onsubmit="return handleSubmit()" id="myform">
+      <div id="container">
+      <h1>Registration</h1>
+        <div class="manager1">
+              <div class="input">
+                    <label class="fullName" for="fullname">Full name:</label>
+                    <input type="text" class="username" />
+              </div>
+              <div class="input">
+                    <label class="email" for="password">Email : </label>
+                    <input type="email" class="email" />
+              </div>
+              <div class="input">
+                    <label class="password" for="password">Password:</label>
+                    <input type="password" class="password" />
+              </div>
+            </div>
+        <div class="manager2">
+          <div class="input">
+            <label class="username" for="username">Username:</label>
+            <input type="text" class="username" />
+          </div>
+          <div class="input">
+              <label class="number" for="number">Phone Number : </label>
+              <input type="number" class="number" />
+              </div>
+          <div class="input">
+                <label class="conformPassword" for="password"
+                  >Confirm Password:</label>
+                  <input type="password" class="conformPassword" />
+          </div>
+        </div>
+
+        <br />
+
+        <h3>Gender</h3>
+
+        <br />
+        <button type="submit">Register</button>
+      </div>
+    </form>
+
+    <script>
+      function handleSubmit() {
+        var name = document.getElementById("username").value;
+
+        var password = document.getElementById("password").value;
+
+        if (name.length < 4) {
+          document.getElementById("nameCheck").innerHTML =
+            "name must be at least 4";
+          return false;
+        }
+        if (password.length < 6) {
+          document.getElementById("passwordCheck").innerHTML =
+            "password must be at least 6";
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

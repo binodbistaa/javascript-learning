@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Set Timeout</title>
+</head>
+<body>
+  <script>
+    let alarm = () => {
+      console.log(`Good Morning Binod ${new Date}`)
+    }
+   
+    // let timerId  = setTimeout(alarm , 2000)
+    // console.log(`Hello everyone ${timerId} ` )
+    // clearTimeout(timerId)
+    
+    // let clear = function(){
+    //   return clearInterval(intervalId)
+    // }
+    let intervalId = setInterval(alarm , 2000)
+    setTimeout(() => clearInterval(intervalId), 5000)
+    
+  </script>
+</body>
+</html>

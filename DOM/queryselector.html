@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>QuerySelector</title>
+</head>
+<body>
+  <h1 class="text">HEllo i am here</h1>
+  <h2 class="text"> I am in hubit</h2>
+  <h3 class="text"> It's located in btl</h3>
+
+
+  <p>First Paragraph</p>
+  <p>Second Paragraph</p>
+  <p>Third Paragraph</p>
+
+  <script>
+    let check2 = document.querySelectorAll('.text') //it's node list so can't apply directly
+    check2.forEach(function(item){
+      item.style.fontSize = '100px'
+    })  
+
+
+    
+    let check1 =  document.querySelector("h1")
+    check1.style.fontSize = '50px'
+
+    let check3 = document.querySelector('.text')
+    check3.style.fontSize = '100px'
+
+  let paragraphCheck = document.querySelectorAll('p')
+  paragraphCheck.forEach(function(element){
+    element.style.color = 'blue'
+  })
+
+
+  
+   
+  </script>
+</body>
+</html>

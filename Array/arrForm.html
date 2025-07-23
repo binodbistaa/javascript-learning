@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Select Array</title>
+</head>
+<body>
+
+ <form action="" onsubmit="return handleSubmit()">
+  <input type="text" id="input" > <br> <br>
+  <div id="div"></div>
+  <button type="submit" >Submit</button>
+</form>
+  <script>
+    let arr = [ 'Banana' , 'Apple' , 'Kiwi' , 'Orange' , 'Mango' ]
+    function handleSubmit(){
+    let inputCheck  = document.getElementById('input').value
+    arr.forEach(element => {
+      
+       if(inputCheck == element){
+        document.getElementById('div').innerHTML = `${element} is Found in given Array`
+       }
+       else{
+        document.getElementById('div').innerHTML = `${inputCheck} isnot found in Given Array`
+       }
+    });
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fetch</title>
+    <link rel="stylesheet" href="fetch.css">
+  </head>
+  <body>
+    <table id="table" style="width: 100%">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>name</th>
+          <th>username</th>
+          <th>email</th>
+          <th>phone</th>
+          <th>website</th>
+          <th>Company</th>
+          <th>City</th>
+          <th>Street</th>
+          <th>ZipCode</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </body>
+  <script>
+    const api = "https://jsonplaceholder.typicode.com/users";
+
+    const fetchData = async () => {
+      try {
+        const response = await fetch(api);
+        if (response.ok) {
+          const data = await response.json();
+          console.log(data);
+          const tbody = document.querySelector("tbody");
+          data.forEach((item) => {
+            tbody.innerHTML += `
+            <tr>
+              <td>${item.id}</td>
+              <td>${item.name}</td>
+              <td>${item.username}</td>
+              <td>${item.email}</td>
+              <td>${item.phone}</td>
+              <td>${item.website}</td>
+              <td>${item.company.name}</td>
+              <td>${item.address.city}</td>
+              <td>${item.address.street}</td>
+              <td>${item.address.zipcode}</td>
+            </tr>
+            `;
+          });
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    fetchData();
+
+    // tabular form ma dakhuni garerw aauna paryo
+  </script>
+</html>

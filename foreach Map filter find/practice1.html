@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practice real Exe</title>
+  </head>
+  <body>
+    <script>
+      const schoolData = [
+        {
+          class: "10A",
+          students: [
+            {
+              id: 1,
+              name: "Sita",
+              age: 15,
+              marks: { math: 88, science: 92, english: 81 },
+            },
+            {
+              id: 2,
+              name: "Ram",
+              age: 16,
+              marks: { math: 75, science: 80, english: 70 },
+            },
+            {
+              id: 3,
+              name: "Hari",
+              age: 15,
+              marks: { math: 95, science: 85, english: 90 },
+            },
+          ],
+        },
+        {
+          class: "10B",
+          students: [
+            {
+              id: 4,
+              name: "Gita",
+              age: 14,
+              marks: { math: 60, science: 65, english: 70 },
+            },
+            {
+              id: 5,
+              name: "Shyam",
+              age: 16,
+              marks: { math: 96, science: 75, english: 80 },
+            },
+            {
+              id: 6,
+              name: "Mina",
+              age: 15,
+              marks: { math: 85, science: 95, english: 88 },
+            },
+          ],
+        },
+      ];
+
+      //       🔁 Easy to Medium Level:
+      // Print the name of all students in the array.
+      // List all class names (10A, 10B, etc).
+      // Print names of students whose age is 15.
+
+      // const filter1 =  schoolData.map((item)=>{
+      //       return item.students.name
+      //    })
+
+      // console.log(filter1)
+
+      // const studentName = schoolData.filter((item) => {
+      //   item.students.filter((data) => {
+      //     return data;
+      //   });
+      // });
+
+      let studentsData = [];
+      const students = schoolData.filter((item) => {
+        return item.students.filter((data) => {
+          data.age === 15 && studentsData.push(data.name);
+        });
+      });
+
+      // console.log(studentsData);
+
+      let studentClass = [];
+      const className = schoolData.filter((item) => {
+        studentClass.push(item.class);
+      });
+      // console.log(studentClass);
+
+      let equalAgeStudent = [];
+      const equalAge = schoolData.filter((item) => {
+        return item.students.filter((data) => {
+          equalAgeStudent.push(data.age);
+        });
+      });
+
+      // console.log(equalAgeStudent);
+      //        Medium to Hard Level:
+      // Print each student's total marks (sum of math, science, english).
+
+      // Find the student who scored highest in math.
+
+      // Print names of students who scored above 85 in science.
+
+      // let studentsMarks = [];
+      // const studentData = schoolData.filter((item) => {
+      //   return item.students.filter((data) => {
+      //     studentsMarks.push({
+      //       name: data.name,
+      //       totalMarks:
+      //         data.marks.english + data.marks.math + data.marks.science,
+      //     });
+      //   });
+      // });
+
+      // // console.log(studentsMarks);
+
+      // let highestMathMark = [];
+      // const student = schoolData.filter((item) => {
+      //   return item.students.filter((data) => {
+      //     highestMathMark.push({
+      //       name: data.name,
+      //       marks: data.marks.math,
+      //     });
+      //   });
+      // });
+
+      // let max = 0;
+      // const final = highestMathMark.filter((item) => {
+      //   if (item.marks > max) max = item.marks;
+      // });
+
+      // const name = highestMathMark.find((item) => {
+      //   return item.marks == max;
+      // });
+
+      // // console.log(`Maths Topper: ${name.name}\n
+      // // Marks: ${name.marks}
+      // // `);
+
+      const greaterMarks = [];
+      const studentScienceMarks = schoolData.filter((item) => {
+        return item.students.filter((item) => {
+          greaterMarks.push({
+            name: item.name,
+            marks: item.marks.science,
+          });
+        });
+      });
+
+      // console.log(greaterMarks);
+      let max1 = 0;
+
+      const final1 = greaterMarks.filter((item) => {
+        return item.marks > 85;
+      });
+
+      // console.log(final1)
+
+      //       🧠 Hard Level:
+      // Create a new array of student names who passed all subjects (passing mark = 75).
+
+      const passedStudents = [];
+      const studentName = schoolData.filter((item) => {
+        return item.students.filter((data) => {
+          passedStudents.push({
+            name: data.name,
+            mathmarks: data.marks.math,
+            Sciencemarks: data.marks.science,
+            englishmarks: data.marks.english,
+          });
+        });
+      });
+
+      const final2 = passedStudents.filter((item) => {
+        return (
+          item.mathmarks >= 75 &&
+          item.Sciencemarks >= 75 &&
+          item.englishmarks >= 75
+        );
+      });
+
+      // console.log(final2);
+
+      const passedName = [];
+      let name1 = final2.filter((item) => {
+        return passedName.push(item.name);
+      });
+
+      console.log(`Passed Student : ${passedName} `);
+
+      // Find the class which has the highest average math score.
+
+      const averageMathScore = [];
+      const filterMark = schoolData.filter((item) => {
+        return item.students.filter((data) => {
+          averageMathScore.push({
+            class: item.class,
+            mathmarks: data.marks.math,
+          });
+        });
+      });
+
+      const firstClassMark = [];
+      finalsum1 = averageMathScore.filter((item) => {
+        if (item.class == "10A") return firstClassMark.push(item.mathmarks);
+      });
+      function printAvg1() {
+        console.log(
+          (firstClassMark[0] + firstClassMark[1] + firstClassMark[2]) / 3
+        );
+      }
+      printAvg1();
+
+      const secondClassMark = [];
+      finalsum1 = averageMathScore.filter((item) => {
+        if (item.class == "10B") return secondClassMark.push(item.mathmarks);
+      });
+      function printAvg2() {
+        console.log(
+          (secondClassMark[0] + secondClassMark[1] + secondClassMark[2]) / 3
+        );
+      }
+      printAvg2();
+      console.log(`10A has greater average than 10B`);
+
+      //  Find the topper of the entire school (highest total marks).
+
+      let sum = 0;
+      const array = [2, 3, 5];
+      array.filter((item) => {
+        sum += item;
+      });
+
+      // console.log(sum);
+
+      let studentsMarks = [];
+      const studentData = schoolData.filter((item) => {
+        return item.students.filter((data) => {
+          studentsMarks.push({
+            name: data.name,
+            totalMarks:
+              data.marks.english + data.marks.math + data.marks.science,
+          });
+        });
+      });
+
+      console.log(studentsMarks);
+      let max = 0;
+
+      const schoolTopper = studentsMarks.filter((item) => {
+        if (item.totalMarks > max) max = item.totalMarks;
+      });
+
+      const finaltopper = studentsMarks.find((item) => {
+        return max == item.totalMarks;
+      });
+
+      console.log(
+        `Topper name : ${finaltopper.name} \n TotalMarks : ${finaltopper.totalMarks}`
+      );
+    </script>
+  </body>
+</html>

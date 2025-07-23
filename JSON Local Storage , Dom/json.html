@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>JSON</title>
+</head>
+<body>
+  <strong id = 'local'></strong>
+  <h1>local storage</h1>
+  <form id = 'login'>
+    <input type="email" id="email" placeholder="enter your email">
+    <input type="password" id="password" placeholder="ener your password">
+    <button type="submit">Log IN</button>
+  </form>
+ 
+  <h1>Saved Data</h1>
+  <h4 id="message"></h4>
+  <p id="data1"></p>
+  <button onclick="clearN()" >clear</button>
+
+
+    <script>
+
+// json
+
+      // let product = {
+      //   name : 'Tshirt' ,
+      //   price : '750' ,
+      //   rating : {
+      //     star : 4.5,
+      //     noOfReview : 500,
+      //   },
+
+      // };
+      // console.log(product);
+      // console.log(typeof product)
+      // let str = JSON.stringify(product);
+      // console.log(str);
+      // console.log(typeof str)
+
+      // let newProduct = JSON.parse(str)
+      //   console.log(newProduct);
+      //   console.log(typeof newProduct)
+
+      //  let product = {
+      //   name : 'Tshirt' ,
+      //   price : '750' ,
+      //   rating : {
+      //     star : 4.5,
+      //     noOfReview : 500,
+      //   }};
+
+
+
+
+
+// localStorage
+//local storage helps to store data in local storage
+
+
+
+        // localStorage.setItem('product' , JSON.stringify(product))
+        // console.log(localStorage.getItem('product'))
+        // let product2 = JSON.parse(localStorage.getItem('product'))
+        // console.log(product2)
+        // localStorage.removeItem('name')
+
+      // localStorage.setItem( 'Name' ,'Binod Bista' );
+      // localStorage.setItem('Class' , 'Bachelor')
+      // localStorage.setItem('name' , 'dghh')
+
+      // console.log(localStorage.getItem('Name'))
+    
+     const form = document.getElementById("login")
+    const data = document.getElementById('data1')
+
+
+    window.onload = () =>{
+          const email= localStorage.getItem('email')
+          const password = localStorage.getItem('password')
+
+          if (email && password){
+            data.innerHTML = `<strong> Email : </strong> ${email} </br>
+                              <strong> Password : </strong> ${password}`
+          }
+    }
+
+    form.addEventListener('submit',(e)=>{
+      e.preventDefault()
+          const email = document.getElementById('email').value
+          const password = document.getElementById('password').value
+
+          localStorage.setItem("email" , email)
+          localStorage.setItem("password" , password)
+    
+
+
+
+    document.getElementById('data1').innerHTML = "Data Saved";
+    data.innerHTML = `<strong> Email : </strong> ${email} </br>
+                      <strong> Password : </strong> ${password}`
+                    
+                    
+    })
+  
+    function clearN(){
+      localStorage.removeItem("email")
+      localStorage.removeItem("password")
+    }
+     
+
+    // localStorage.setItem('Name' , 'Binod Bista')
+    // let data = localStorage.getItem('Name')
+    // document.getElementById("local").innerHTML = data
+
+
+    //cookies ; 
+    //         - store the data from api
+    //         - cookies experies after the certain time
+   //          - cookies hits the data and store the user crediential like token there expire data
+
+
+
+
+
+
+
+
+
+
+// Date
+
+  // let mydate = new Date();
+  // console.log(mydate);
+  // console.log(mydate.getTime());
+  // console.log(mydate.getFullYear());
+  // console.log(mydate.getDay());
+  // console.log(mydate.getMinutes());
+  // console.log(mydate.getHours());
+  // console.log(mydate.getMilliseconds());
+ 
+  
+
+
+
+
+    </script> 
+    
+
+    </h1>
+</body>
+</html>

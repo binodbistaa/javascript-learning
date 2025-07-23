@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Rest Parameter and Spread Operator</title>
+</head>
+<body>
+  <h5>Rest Parameter and Spread Operator. <br>
+Template Literals. <br>
+Destructuring Assignment. <br>
+Enhanced Object Literal. </h5>
+  <script>
+    // pass Array in the form of parameter 
+    // for in pass aray in the form of string and for of in value   
+
+  //   function myfunc(nums){
+  //   let total = 0 ;
+  //   for (let n of nums) {
+  //     total += n;
+  //   }
+  //   return total;
+  //   }
+
+  //  console.log(myfunc([2,3,4,5,6,7]))
+
+
+
+
+  // spread operator
+
+  // copy Array
+  // let arr1 = [2 ,3 , 4]
+  // let arr2 = [...arr1]
+  // console.log(arr1)
+  // console.log(arr2)
+
+
+  // merge array
+  // let arr3 = [5 , 6 ,7]
+  // console.log([...arr2 , ...arr3])
+
+  // restparameter
+  let arr1 = [2, 3, 4];
+
+function myfunc( a , b , c) {
+  sum = a + b + c ;
+  return sum ;
+}
+
+console.log(myfunc(...arr1));  // Expected output: 9
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

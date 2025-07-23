@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>EventListner</title>
+</head>
+<body>
+  <button id="myBtn">Click Me</button>
+  <script>
+   let buttonElement = document.querySelector('#myBtn')
+
+   let confuse = event => console.log(`i am clicked ${new Date}`)
+   buttonElement.addEventListener('click' , confuse )
+
+   let moreconfuse = event => console.log(`Hello i am again clicked` + new Date ())
+   buttonElement.addEventListener('click' , moreconfuse)
+
+   buttonElement.removeEventListener('click' , moreconfuse)
+
+  </script>
+</body>
+</html>

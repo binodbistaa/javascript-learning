@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>validate text</h1>
+    <input type="text" id="texting" placeholder="Enter a text">
+    <span style="color:rgb(244, 31, 31);" id="message"></span>
+    <button onclick="validate()">check text</button>
+
+
+</body>
+<script>
+    //Object
+    //Everything is an object 
+    // every object has certain key and value 
+    // object is denoted by object literal{}
+
+    let obj = { key: "value", keys: "value" }
+
+    //it freezes the object and doesn't let object to change 
+    Object.freeze(obj)
+    obj.key = "new";
+    console.log(obj.key = "newValue")
+    console.log(obj)
+
+    //new keyword is used to invoke the constructor 
+    const val = new Object()
+    val.name = "Value"
+    val.klass = "  "
+    val.address = "butwal"
+    console.log(val)
+
+    const data = [{
+        name: "suham",
+        klass: "bachelor",
+        address: [{
+            temporary: ["tilottama", "manigram", 5],
+            permanent: ["ganeshnagar", "manigram", 7],
+        }]
+    }, {
+        name: "sujan",
+        klass: "masters",
+        address: [{
+            temporary: ["belbas", "sdfs", 6],
+            permanent: ["palpa", "rewerwe", 7],
+        }]
+    }]
+
+    console.log(data[0].address[0].temporary[0])
+
+    console.log(data.map((value, index, array) => {
+        return value.address.map((value) => {
+            return value.permanent.filter((value) => {
+                return value === 7
+            })
+
+        })
+    }))
+    /// try catch
+    // for the better code we have to handle the
+
+    let x = 20
+    let y = 22
+    try {
+        console.log(x + y); //success
+    }
+    catch (error) {
+        console.error(error)
+    }
+    finally {
+        console.log("chilled personal")
+    }
+
+
+    function validate() {
+        let message = document.getElementById("message");
+        message.innerHTML = " "
+        let texting = document.getElementById("texting").value
+
+
+        try {
+            if (texting.trim() == "") {
+                throw ("opps! the field cannot be empty") //thro generate the customer
+            }
+            if (!isNaN(texting)) {
+                throw ("whats, yai ho tarika khoi tw text")
+            }
+            if (!texting.includes("@")) {
+                throw ("hmm... i think you should include special charater");
+
+            }
+        }
+
+        catch (err) {
+            message.innerHTML = err
+        }
+    }
+
+
+    //promices
+    //i will be there for you
+
+    function distance(){
+        //procedual code
+        return new Promise((resolve, reject) => { 
+            let api =fetch('https://jsonplaceholder.typicode.com/users')
+            app.then((res)=>{
+                console.log(res)
+                if((res.ok == true)){
+                    resolve(res.json())
+                }else{
+                    reject("Opps!! something went wrong")
+                }
+            })
+        })
+    }
+    //consuming code
+    distance().then(()=>{
+        console.log(res)
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+
+
+
+
+//async await
+ function myfun(){
+  return 1;
+ }
+ console.log(myfun())
+
+ async function myfun() {
+    return 1;
+ }
+  console.log(myfun())
+
+  //async function handles the promise in better way
+  //async await are the two brother without one another is not possible
+  //async waits for the await to execute
+
+  async function hero(){
+    let val =  new Promise((res,rej)=>{
+      setTimeout(()=>{
+        res (console.log("time lage gaa"))
+      } , 3000)
+    })
+
+    //the function doesnot execute until the await is executed
+    await val
+  }
+  hero().then((res)=>{
+    console.log("aayou sathy")
+  }).catch((err)=>{
+    console.log("Opps!!")
+  })
+
+
+
+
+
+
+
+
+</script>
+
+</html>
+jsonplaceholder.type6code.com

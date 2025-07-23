@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Destructuring Assignment
+
+  </title>
+</head>
+<body>
+  <script>
+// Destructuring 
+
+
+    // let [a , b] = [3 , 6]
+    // console.log(a)
+    // console.log(b)
+
+    // let person = { name : 'Binod' , age : 20} 
+    // let {name , age} = person
+    // console.log(name)
+    // console.log(age)
+
+
+
+  // Enhancement object literal
+
+//   let name = 'kelly'
+//   let age = 7
+//   let height = 3.1 + 'ft'
+//   let dogBark = function dogbark(){
+//      console.log('woooooo !!!!')}
+
+
+//  dog = {
+//   name ,
+//   age ,
+//   height ,
+//   dogBark,
+//   }
+  
+ 
+//  console.log(dog)
+//  dog.dogBark()
+  
+
+// Merge of Destructuring
+
+function myfunc({name , age}){
+  return {
+    name , 
+    age,
+    greet(){
+      console.log(`hi ${name} , your age is ${age}`)
+    }
+  }
+}
+
+let destructuring = myfunc({name : 'Binod' , age : 20})
+destructuring.greet()
+  </script>
+</body>
+</html>
